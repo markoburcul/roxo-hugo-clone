@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="site-about-header" style="margin-top: 150px;">
+  <div class="container">
+
+      <div class="row justify-content-center align-items-center">
+          <div class="section-title"></div>
+            <img src="{{ .Params.profile_image  | absURL }}" alt="profile-pictures">
+          </div>
+          <div class="section-title  text-center">
+            <h1 style="margin-top: 40px;">
+              {{ .Params.heading }}
+            </h1>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="site-counter" id="counter" style="background-color: #3b5983;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2 class="text-white">{{ .Params.title }}</h2>
+        </div>
+      </div>
+      <div class="col-12">
+          <p class="text-white" style="font-size: 20px; font-weight: 300;">{{.Description}}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="site-expertise">
+  <div class="container">
+    <div class="row">
+      {{ with .Params.expertise_title }}
+      <div class="col-md-5">
+        <div class="section-title">
+          <h2>{{ . }}</h2>
+        </div>
+      </div>
+      {{ end }}
+      <div class="col-md-6">
+        <ul class="site-expertise-list">
+          {{ range .Params.expertise_sectors }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "call-to-action.html" . }}
+
+{{ end }}
