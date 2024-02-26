@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer"  style="background-color: #12203d; color: white;">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -36,18 +36,6 @@
         </div>
       </div>
       {{ end }}
-      {{ with .Site.Params.footer.social }}
-      <div class="col-lg-2 col-md-6">
-        <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">{{ .title }}</h5>
-          <ul class="site-footer-widget-links">
-            {{ range .link }}
-              <li><a href="{{ .url }}">{{ .name }}</a></li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-      {{ end }}
       {{ with .Site.Params.footer.service }}
       <div class="col-lg-3 col-md-6">
         <div class="site-footer-widget">
@@ -65,11 +53,6 @@
 	    {{ .Site.Params.footer.back_to_top.description | safeHTML }}
           </p>
         </a>
-      </div>
-      <div class="col-12">
-        <div class="site-footer-copyright">
-          <p>© Copyright {{ dateFormat "2006" now }} - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a> </p>
-        </div>
       </div>
     </div>
     {{ if .Site.Params.footer.qr_print }}

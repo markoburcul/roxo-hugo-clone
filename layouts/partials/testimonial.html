@@ -14,18 +14,16 @@
           </div>
         </div>
         {{ range .testimonial_item }}
+
         <div class="col-lg-4 col-md-6">
           <div class="site-testimonial-item">
             <div class="site-testimonial-item-header">
-              <div class="thumb">
-                <img src="{{ .thumb | absURL }}" alt="user-thumb-one">
-              </div>
               <div class="person">
                 <h5>{{ .name }}</h5>
-                <p>{{ .company_position }}</p>
+                <p></p>
               </div>
             </div>
-            <p class="site-testimonial-item-body">
+            <p class="site-testimonial-item-body" style=" color: #12203d;">
               {{ .quote }}
             </p>
           </div>

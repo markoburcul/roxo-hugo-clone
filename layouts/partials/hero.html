@@ -5,14 +5,14 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <div class="site-hero-content text-center">
+          <div class="site-hero-content text-center" style="margin-bottom: 130px;">
             <h6>{{ .tagline }}</h6>
-            <h1>
+            <h1 style="color: #d1d2d2;">
               {{ .heading }}
             </h1>
             <ul class="site-hero-content-buttons">
               <li>
-                <a href="{{ .primary_button_url | absURL }}" class="btn btn-secondary">
+                <a href="{{ .primary_button_url | absURL }}" class="btn btn-secondary" style="background-color: #3b5983; color: #d1d2d2;">
                   <span class="btn-area">
                     <span data-text="{{ .primary_button }}">
                       {{ .primary_button }}
@@ -21,7 +21,7 @@
                 </a>
               </li>
               <li>
-                <a href="{{ .secondary_button_url | absURL }}" class="btn btn-primary">
+                <a href="{{ .secondary_button_url | absURL }}" class="btn btn-primary" style="background-color: #3b5983; color: #d1d2d2;">
                   <span class="btn-area">
                     <span data-text="{{ .secondary_button }}">
                       {{ .secondary_button }}
