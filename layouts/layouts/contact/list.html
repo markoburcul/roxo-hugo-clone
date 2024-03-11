@@ -13,26 +13,26 @@
           <form id="contact-form" action="{{ .Site.Params.fabform }}" method="post">
             <div class="row">
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="{{ .Site.Params.contactForm.placeholder_first_name }}" required>
+                <input type="text" class="form-control" name="ime" id="ime" placeholder="{{ .Site.Params.contactForm.placeholder_first_name }}" required>
               </div>
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="{{ .Site.Params.contactForm.placeholder_last_name }}" required>
+                <input type="text" class="form-control" name="prezime" id="prezime" placeholder="{{ .Site.Params.contactForm.placeholder_last_name }}" required>
               </div>
               <div class="col-lg-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="{{ .Site.Params.contactForm.placeholder_email }}" required>
               </div>
               <div class="col-lg-6">
                 <div class="select-wrapper">
-                  <select class="form-control" id="projectType" name="project-type" required>
-                    <option value="" selected disabled hidden>{{ .Site.Params.contactForm.placeholder_project_type }}</option>
-                    {{ range .Site.Params.contactForm.projectType }}
+                  <select class="form-control" id="vrsta-usluge" name="vrsta-usluge" required>
+                    <option value="" selected disabled hidden>{{ .Site.Params.contactForm.placeholder_service_type }}</option>
+                    {{ range .Site.Params.contactForm.serviceType }}
                     <option value="{{ .value }}">{{ .title }}</option>
                     {{ end }}
                   </select>
                 </div>
               </div>
               <div class="col-12">
-                <textarea class="form-control" id="aboutProject" name="about-project" rows="6" placeholder="{{ .Site.Params.contactForm.placeholder_about_the_project }}"></textarea>
+                <textarea class="form-control" id="poruka" name="poruka" rows="6" placeholder="{{ .Site.Params.contactForm.placeholder_message }}"></textarea>
               </div>
               <div class="col-12">
                 <button formtarget="_blank" type="submit" class="btn btn-primary" id="contact-form-button" style="background-color: #3b5983; color: #d1d2d2;">
