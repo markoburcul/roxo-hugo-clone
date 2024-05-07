@@ -34,4 +34,22 @@
   <!--Favicon-->
   <link rel="shortcut icon" href="{{ .Site.Params.favicon_shortcut_icon | absURL }}" type="image/x-icon" />
   <link rel="icon" href="{{ .Site.Params.favicon_icon | absURL }}" type="image/x-icon" />
+
+  <meta name="keywords" content="{{ $.Site.Params.tags }}" />
+  <meta property="og:site_name" content="{{ $.Site.Title }}" />
+  <meta property="og:title" content="{{ $.Site.Title }}" />
+  <meta property="og:description" content="{{ $.Site.Params.Description }}" />
+  <meta name="description" content="{{ $.Site.Params.Description }}" />
+  <meta property="article:author" content="{{ .Site.Params.Author }}" />
+  <meta property="article:published_time" content="{{ .Date }}" />
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bs_BA">
+  <meta property="og:locale:alternate" content="sr_RS">
+  <meta property="og:locale:alternate" content="hr_HR">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ $.Site.BaseURL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $.Site.Title }}">
+  <meta name="twitter:description" content="{{ $.Site.Params.Description }}">
+
 </head>
